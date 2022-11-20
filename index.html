@@ -1,43 +1,55 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title> Calculator</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-           <div class="calcBody">
-                <div class="output">
-                    <div class="previousNum"></div>
-                    <div class="currentNum"></div>
-                </div>
-                <button class="clear">AC</button>
-                <div class="firstRow">
-                    <button class="number">7</button>
-                    <button class="number">8</button>
-                    <button class="number">9</button>
-                    <button class="operator">/</button>
-                </div>
-                <div class="secondRow">
-                    <button class="number">4</button>
-                    <button class="number">5</button>
-                    <button class="number">6</button>
-                    <button class="operator">x</button>
-                </div>
-                <div class="thirdRow">
-                    <button class="number">1</button>
-                    <button class="number">2</button>
-                    <button class="number">3</button>
-                    <button class="operator">-</button>
-                </div>
-                <div class="fourthRow">
-                    <button class="decimal">.</button>
-                    <button class="number">0</button>
-                    <button class="equal">=</button>
-                    <button class="operator">+</button>
-                </div>
-           </div>
-    </body>
-    <script src="main.js"></script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="calculator">
+        <div class="screen">
+          <div class="screen-last" id="lastOperationScreen"></div>
+          <div class="screen-current" id="currentOperationScreen">0</div>
+        </div>
+        <div class="buttons-grid">
+          <button
+            class="btn btn-red span-2"
+            id="clearBtn"
+            onclick="this.blur();"
+          >
+            CLEAR
+          </button>
+          <button
+            class="btn btn-blue span-2"
+            id="deleteBtn"
+            onclick="this.blur();"
+          >
+            DELETE
+          </button>
+          <button class="btn" onclick="this.blur();" data-number>7</button>
+          <button class="btn" onclick="this.blur();" data-number>8</button>
+          <button class="btn" onclick="this.blur();" data-number>9</button>
+          <button class="btn" onclick="this.blur();" data-operator>/</button>
+
+          <button class="btn" onclick="this.blur();" data-number>4</button>
+          <button class="btn" onclick="this.blur();" data-number>5</button>
+          <button class="btn" onclick="this.blur();" data-number>6</button>
+          <button class="btn" onclick="this.blur();" data-operator>×</button>
+
+          <button class="btn" onclick="this.blur();" data-number>1</button>
+          <button class="btn" onclick="this.blur();" data-number>2</button>
+          <button class="btn" onclick="this.blur();" data-number>3</button>
+          <button class="btn" onclick="this.blur();" data-operator>−</button>
+
+          <button class="btn" onclick="this.blur();" id="pointBtn">.</button>
+          <button class="btn" onclick="this.blur();" data-number>0</button>
+          <button class="btn" onclick="this.blur();" id="equalsBtn">=</button>
+          <button class="btn" onclick="this.blur();" data-operator>+</button>
+        </div>
+      </div>
+    </main>
+   
+  </body>
+  <script src="main.js"></script>
 </html>
