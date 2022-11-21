@@ -23,11 +23,7 @@
     margin: 0;
   }
   
-  html {
-    /* footer support */
-    position: relative;
-    min-height: 100%;
-  }
+
   
   body {
     background-color: var(--background);
@@ -67,7 +63,7 @@
     background-color: var(--calculator);
   }
   
-  .screen {
+  .output {
     padding: 10px 20px;
     border: 2px var(--border) solid;
     border-radius: 5px;
@@ -78,12 +74,12 @@
     word-break: break-all;
   }
   
-  .screen-last {
+  .previousNumb {
     min-height: 32px;
     font-size: 20px;
   }
   
-  .screen-current {
+  .currentNumb {
     min-height: 64px;
     font-size: 40px;
   }
@@ -94,11 +90,11 @@
     grid-gap: 10px;
   }
   
-  .span-2 {
+  .clear, .delete {
     grid-column: span 2;
   }
   
-  .btn {
+  .number, .operator, .decimal {
     padding: 20px;
     border: 2px var(--border) solid;
     border-radius: 5px;
@@ -106,43 +102,49 @@
     font-size: 20px;
   }
   
-  .btn:hover {
+  .number:hover, .operator:hover, .decimal:hover  {
     background-color: var(--btn-hover);
   }
   
-  .btn:active {
+  .number:active, .operator:active, .decimal:active {
     background-color: var(--btn-active);
   }
-  
-  .btn-red {
+ 
+  .clear {
     background-color: var(--btn-red);
+    border: 2px var(--border) solid;
+    font-weight: 900;
+    font-size:large;
   }
   
-  .btn-red:hover {
+  .clear:hover {
     background-color: var(--btn-red-hover);
   }
   
-  .btn-red:active {
+  .clear:active {
     background-color: var(--btn-red-active);
   }
   
-  .btn-blue {
+  .delete {
     background-color: var(--btn-blue);
+    border: 2px var(--border) solid;
+    font-size:x-large;
+    font-weight: 900;
   }
   
-  .btn-blue:hover {
+  .delete:hover {
     background-color: var(--btn-blue-hover);
   }
   
-  .btn-blue:active {
+  .delete:active {
     background-color: var(--btn-blue-active);
   }
   
   /* Disables input spinners in calc screen */
-  input[type='number']::-webkit-inner-spin-button,
+  /* input[type='number']::-webkit-inner-spin-button,
   input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
-  
+   */
 
