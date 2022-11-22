@@ -1,13 +1,14 @@
 let currentNumb= "";
-let prevNumb="";
+let previousNumb="";
 let operator= "";
 
-const currentDisplayNum= document.querySelector ("");
-const previousDisplayNum= document.querySelector ("");
+const currentDisplayNum= document.querySelector (".currentNumb");
+const previousDisplayNum= document.querySelector (".previousNumb");
 
-const equal= document.querySelector ("");
-const numb= document.querySelector ("");
-const operators= document.querySelector ("");
-const numbers= document.querySelecor ("");
-const clear= document.querySelector ("");
+const operators= document.querySelectorAll (".operator");
+const equal= document.querySelector (".equal");
+const numb= document.querySelectorAll (".number");
+
+const clear= document.querySelector (".clear");
+const del= document.querySelector (".delete");
 
