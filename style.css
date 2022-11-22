@@ -94,7 +94,7 @@
     grid-column: span 2;
   }
   
-  .number, .operator, .decimal {
+  .number, .operator, .decimal, .equal {
     padding: 20px;
     border: 2px var(--border) solid;
     border-radius: 5px;
