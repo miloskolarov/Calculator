@@ -20,7 +20,7 @@ numb.forEach((btn)=> {
 }) ;
 
 function printNum(number) {
-    currentNumb+= number;
-    currentDisplayNum.textContent= currentNumb;
+   if (currentNumb.length <= 12) {currentNumb+= number;
+    currentDisplayNum.textContent= currentNumb;}
 }
 
