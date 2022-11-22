@@ -17,10 +17,22 @@ numb.forEach((btn)=> {
         printNum (e.target.textContent);
     });
 
-}) ;
+});
 
 function printNum(number) {
    if (currentNumb.length <= 12) {currentNumb+= number;
     currentDisplayNum.textContent= currentNumb;}
-}
+};
 
+operators.forEach ((btn) => {
+    btn.addEventListener("click", (e) => {
+        printOp(e.target.textContent);
+    });
+
+});
+
+function printOp(op) {
+    operator= op;
+    previousNumb= currentNumb;
+    previousDisplayNum.textContent= previousNumb + " " + op;
+} 
