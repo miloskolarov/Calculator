@@ -12,3 +12,15 @@ const numb= document.querySelectorAll (".number");
 const clear= document.querySelector (".clear");
 const del= document.querySelector (".delete");
 
+numb.forEach((btn)=> {
+    btn.addEventListener("click", (e) => {
+        printNum (e.target.textContent);
+    });
+
+}) ;
+
+function printNum(number) {
+    currentNumb+= number;
+    currentDisplayNum.textContent= currentNumb;
+}
+
