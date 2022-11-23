@@ -51,18 +51,15 @@ function calculate() {
     previousNumb= Number (previousNumb);
     currentNumb= Number (currentNumb); 
 
-    if (operator === "+") {
-        previousNum += currentNum;
-      } else if (operator === "-") {
-        previousNum -= currentNum;
-      } else if (operator === "x") {
-        previousNum *= currentNum;
-      } else if (operator === "/") {
-        if (currentNum <= 0) {
-          previousNum = "Error";
-          displayResults();
-          return;
-        }
-        previousNum /= currentNum;
-      }
+    if (operator=== "+" ) {
+    previousNumb= previousNumb + currentNumb;
+};
+previousDisplayNum.textContent= "";
+currentDisplayNum.textContent= previousNumb;
 }
+
+
+// Write a function to display results
+
+
+
