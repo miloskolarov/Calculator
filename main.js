@@ -60,7 +60,6 @@ previousDisplayNum.textContent= "";
 currentDisplayNum.textContent= previousNumb;
 }
 
-// Write clear screen function
 
 function clearDisplay() {
 currentNumb= "";
@@ -70,6 +69,11 @@ previousDisplayNum.textContent= "";
 currentDisplayNum.textContent= 0;
 
 }
+// write delete function
+    //use slice
+    //if number is current number number is not empty string
+    //if current number is empty string display zero
 
+// add function to a button
 
 
