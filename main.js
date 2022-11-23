@@ -11,6 +11,7 @@ equal.addEventListener ("click", () => calculate());
 const numb= document.querySelectorAll (".number");
 
 const clear= document.querySelector (".clear");
+clear.addEventListener ("click", () => clearDisplay());
 const del= document.querySelector (".delete");
 
 numb.forEach((btn)=> {
@@ -40,12 +41,6 @@ function printOp(op) {
     currentDisplayNum.textContent= "";
 } 
 
-// Add calculator function
-    // Add an event listener to equal
-
-    // Make function to calculate depending on the operator
-    //Convert previousNumb and currentNumb to Number(method)
-    //Use else if statements for each operator
 
 function calculate() {
     previousNumb= Number (previousNumb);
@@ -61,13 +56,20 @@ function calculate() {
     previousNumb= previousNumb / currentNumb;
 } 
 
-
 previousDisplayNum.textContent= "";
 currentDisplayNum.textContent= previousNumb;
 }
 
+// Write clear screen function
 
-// Write a function to display results
+function clearDisplay() {
+currentNumb= "";
+previousNumb= "";
+operator= "";
+previousDisplayNum.textContent= "";
+currentDisplayNum.textContent= 0;
+
+}
 
 
 
