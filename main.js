@@ -38,3 +38,10 @@ function printOp(op) {
     currentNumb= "";
     currentDisplayNum.textContent= "";
 } 
+
+// Add calculator function
+    // Add an event listener to equal
+
+    // Make function to calculate depending on the operator
+    //Convert previousNumb and currentNumb to Number(method)
+    //Use else if statements for each operator
