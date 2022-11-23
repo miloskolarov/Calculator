@@ -53,7 +53,15 @@ function calculate() {
 
     if (operator=== "+" ) {
     previousNumb= previousNumb + currentNumb;
-};
+} else if (operator === "-") {
+    previousNumb= previousNumb - currentNumb;
+} else if (operator === "x") {
+    previousNumb= previousNumb * currentNumb;
+} else if (operator === "/") {
+    previousNumb= previousNumb / currentNumb;
+} 
+
+
 previousDisplayNum.textContent= "";
 currentDisplayNum.textContent= previousNumb;
 }
