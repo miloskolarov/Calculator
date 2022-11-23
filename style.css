@@ -102,7 +102,7 @@
     font-size: 20px;
   }
   
-  .number:hover, .operator:hover, .decimal:hover  {
+  .number:hover, .operator:hover, .decimal:hover, .equal:hover   {
     background-color: var(--btn-hover);
   }
   
