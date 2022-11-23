@@ -7,6 +7,7 @@ const previousDisplayNum= document.querySelector (".previousNumb");
 
 const operators= document.querySelectorAll (".operator");
 const equal= document.querySelector (".equal");
+equal.addEventListener ("click", () => calculate());
 const numb= document.querySelectorAll (".number");
 
 const clear= document.querySelector (".clear");
@@ -45,3 +46,23 @@ function printOp(op) {
     // Make function to calculate depending on the operator
     //Convert previousNumb and currentNumb to Number(method)
     //Use else if statements for each operator
+
+function calculate() {
+    previousNumb= Number (previousNumb);
+    currentNumb= Number (currentNumb); 
+
+    if (operator === "+") {
+        previousNum += currentNum;
+      } else if (operator === "-") {
+        previousNum -= currentNum;
+      } else if (operator === "x") {
+        previousNum *= currentNum;
+      } else if (operator === "/") {
+        if (currentNum <= 0) {
+          previousNum = "Error";
+          displayResults();
+          return;
+        }
+        previousNum /= currentNum;
+      }
+}
