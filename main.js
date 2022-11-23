@@ -14,6 +14,8 @@ const clear= document.querySelector (".clear");
 clear.addEventListener ("click", () => clearDisplay());
 const del= document.querySelector (".delete");
 del.addEventListener ("click", ()=> deleteNumber());
+const decimal= document.querySelector (".decimal");
+decimal.addEventListener( "click", ()=> addDecimal ());
 
 numb.forEach((btn)=> {
     btn.addEventListener("click", (e) => {
@@ -70,10 +72,6 @@ previousDisplayNum.textContent= "";
 currentDisplayNum.textContent= 0;
 
 }
-// write delete function
-    //use slice
-    //if number is current number number is not empty string
-    //if current number is empty string display zero
 
 function deleteNumber () {
     if (currentNumb != "") {
@@ -82,6 +80,12 @@ function deleteNumber () {
     }
 }
 
-// add function to a button
-
+// Write decimal function and add it to a button
+    // if there is no decimal, add decimal
+function addDecimal() {
+    if (!currentNumb.includes(".")) {
+        currentNumb += ".";
+    }
+    currentDisplayNum.textContent= currentNumb;
+}
 
