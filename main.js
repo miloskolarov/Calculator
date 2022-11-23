@@ -35,4 +35,6 @@ function printOp(op) {
     operator= op;
     previousNumb= currentNumb;
     previousDisplayNum.textContent= previousNumb + " " + op;
+    currentNumb= "";
+    currentDisplayNum.textContent= "";
 } 
