@@ -13,6 +13,7 @@ const numb= document.querySelectorAll (".number");
 const clear= document.querySelector (".clear");
 clear.addEventListener ("click", () => clearDisplay());
 const del= document.querySelector (".delete");
+del.addEventListener ("click", ()=> deleteNumber());
 
 numb.forEach((btn)=> {
     btn.addEventListener("click", (e) => {
@@ -73,6 +74,13 @@ currentDisplayNum.textContent= 0;
     //use slice
     //if number is current number number is not empty string
     //if current number is empty string display zero
+
+function deleteNumber () {
+    if (currentNumb != "") {
+        currentNumb= currentNumb.slice (0, -1);
+        currentDisplayNum.textContent=currentNumb;
+    }
+}
 
 // add function to a button
 
