@@ -80,8 +80,6 @@ function deleteNumber () {
     }
 }
 
-// Write decimal function and add it to a button
-    // if there is no decimal, add decimal
 function addDecimal() {
     if (!currentNumb.includes(".")) {
         currentNumb += ".";
@@ -89,3 +87,6 @@ function addDecimal() {
     currentDisplayNum.textContent= currentNumb;
 }
 
+// Add multiple number support
+//Add divide by zero error
+//Add max display number
