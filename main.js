@@ -59,12 +59,22 @@ function calculate() {
      if (currentNumb <=0) { previousNumb= "Error";
         previousDisplayNum.textContent= "";
         currentDisplayNum.textContent= previousNumb;
- return;}
+        eturn;}
     previousNumb= previousNumb / currentNumb;
 } 
+    previousNumb= previousNumb.toString();
+    displayNumber();
 
-previousDisplayNum.textContent= "";
-currentDisplayNum.textContent= previousNumb;
+}
+
+function displayNumber () {
+    previousDisplayNum.textContent= "";
+    operator= "";
+    if (previousNumb.length <= 11){
+    currentDisplayNum.textContent= previousNumb;
+}   else {
+    currentDisplayNum.textContent= previousNumb.slice(0, 11)+ "...";
+}
 }
 
 
@@ -92,5 +102,5 @@ function addDecimal() {
 }
 
 // Add multiple number support
-//Add divide by zero error
+
 //Add max display number
