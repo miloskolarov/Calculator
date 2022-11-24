@@ -25,6 +25,10 @@ numb.forEach((btn)=> {
 });
 
 function printNum(number) {
+    if (previousNumb!== "" && currentNumb !== "" && operator === "") {
+        previousNumb= "";
+        currentDisplayNum.textContent= currentNumb;
+    }
    if (currentNumb.length <= 12) {currentNumb+= number;
     currentDisplayNum.textContent= currentNumb;}
 };
@@ -37,12 +41,28 @@ operators.forEach ((btn) => {
 });
 
 function printOp(op) {
-    operator= op;
-    previousNumb= currentNumb;
-    previousDisplayNum.textContent= previousNumb + " " + op;
-    currentNumb= "";
-    currentDisplayNum.textContent= "";
+   if (previousNumb=== "") {
+     previousNumb= currentNumb;
+     multipleNum (op);
+   } else if (currentNumb=== "") {
+     multipleNum (op);
+   } else {
+        calculate();
+        operator= op;
+        currentDisplayNum.textContent= "0";
+        previousDisplayNum.textContent= previousNumb + " " + operator;
+        
+   }
+    
+   
 } 
+
+function multipleNum (text){
+    operator= text;
+    previousDisplayNum.textContent= previousNumb + " " + operator;
+    currentDisplayNum.textContent= "0";
+    currentNumb= "";
+}
 
 
 function calculate() {
@@ -68,13 +88,14 @@ function calculate() {
 }
 
 function displayNumber () {
-    previousDisplayNum.textContent= "";
-    operator= "";
     if (previousNumb.length <= 11){
     currentDisplayNum.textContent= previousNumb;
 }   else {
     currentDisplayNum.textContent= previousNumb.slice(0, 11)+ "...";
 }
+    previousDisplayNum.textContent= "";
+    operator= "";
+    currentNumb= "";
 }
 
 
@@ -103,4 +124,4 @@ function addDecimal() {
 
 // Add multiple number support
 
-//Add max display number
+//
