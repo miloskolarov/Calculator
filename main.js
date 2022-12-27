@@ -122,6 +122,3 @@ function addDecimal() {
     currentDisplayNum.textContent= currentNumb;
 }
 
-// Add multiple number support
-
-//
