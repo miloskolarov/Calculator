@@ -12,6 +12,6 @@ This project involved the creation of a simple calculator using HTML, CSS, and J
 The calculator can be accessed on GitHub Pages by following the link:
 [https://miloskolarov.github.io/Calculator/](https://miloskolarov.github.io/Calculator/)]
 
-**b. Downloading a local copy **
+**b.Downloading a local copy**
 
 It is also possible to make a local copy of the calculator. This is achieved by downloading a ZIP version of this repository by clicking Code and selecting "Download ZIP" from the drop-down menu. After downloading the ZIP file, unpack the archive and access the game using your web browser.
